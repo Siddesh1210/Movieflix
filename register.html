@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MovieFlix-Register</title>
+    <link rel="stylesheet" href="./resource/login.css">
+    <link rel="stylesheet" href="./resource/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- favicon link -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- aos installation css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- icon link css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <style>
+      @media (max-width:767px){
+        .remove{
+          box-shadow: 5px 5px 10px black;
+        }
+      }
+      @media (min-width:768px){
+        .remove{
+          box-shadow: 3px 3px 10px rgb(248, 248, 248);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg pb-2 pt-2" style="background-color:black;" id="mynavbar" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="container-fluid">
+          <img src="./images/logo.jpg" class="img-fluid logo-navbar" />
+          <a
+            class="navbar-brand me-2"
+            href="#"
+            style="font-family: 'Times New Roman', Times, serif"
+            ><span style="color: red; margin-left: 10px">MovieFlix</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" data-toggle="collapse" data-target=".navbar-collapse.show">Movie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" data-toggle="collapse" data-target=".navbar-collapse.show">Series</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <!-- <input class="form-control me-2" type="search" placeholder="Search your movie" aria-label="Search"> -->
+              <!-- <button class="btn btn-outline-light" type="submit">Login</button> -->
+              <!-- <button class="btn btn-outline-light ms-3 me-2" type="submit">
+                Register
+              </button> -->
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Container start -->
+    <div class="container-fluid">
+
+      <div class="row pb-3"></div>
+        <!-- form start -->
+      <div class="row text-white justify-content-evenly pt-5 pb-5" style="background-color:black; font-family:'Times New Roman', Times, serif;" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="col-md-8 p-3 remove" style="border-radius:15px;">
+            <form>
+                <h4>Create Account</h4>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" required>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Re-enter Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <button type="submit" class="btn btn-dark">Create Account</button>
+              </form>
+              <h4 class="mt-3">Already has account ? <a href="./login.html" style="text-decoration:none;">Login</a></h4>
+        </div>
+      </div>
+        <!-- form end -->
+
+    <!-- footer -->
+    <div
+    class="row justify-content-evenly text-center pt-3 pb-3 text-danger"
+    style="
+      font-family: 'Times New Roman', Times, serif;
+      border-top: 1px solid rgb(85, 82, 82); background-color:black;
+    "
+  >
+    <div class="col-md-10">
+      <h5>Copyright @Movieflix 2022.All right reserved.</h5>
+      <h5>Developed by Siddesh Jaiswal</h5>
+      <h5>Contact me on </h5>
+      <h4>
+        <a href="https://www.facebook.com/siddesh.jaiswal.921"><i class="bi bi-facebook pe-2 ps-2" style="color:rgb(49, 117, 196)"></i></a>
+        <a href="http://instagram.com/siddesh12_?utm_source=qr"><i class="bi bi-instagram pe-2" style="color:rgb(245, 55, 252)"></i></a>
+        <a href="mailto:siddeshjaiswal12@gmail.com"><i class="bi bi-envelope pe-2" style="color:rgb(247, 4, 4)"></i></i></a>
+        <a href="https://github.com/Siddesh1210"><i class="bi bi-github pe-2" style="color:rgb(250, 250, 253)"></i></a>
+      </h4>
+    </div>
+  </div>
+  <!-- footer-end -->
+      
+
+      
+      <!-- container end -->
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- aos installation script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- aos end -->
+    <script>
+        $(document).ready(function()
+            {
+              if($(window).width()<=991){
+                $(".navbar").removeClass("fixed-top");
+              }
+              else if($(window).width()>991){
+                $(".navbar").addClass("fixed-top");
+              }
+            });
+          </script>
+  </body>
+</html>

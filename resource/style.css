@@ -1,0 +1,92 @@
+body{
+  background-color: black;
+}
+@media (min-width:768px){
+  .logo-navbar{
+    width:3%;
+  }
+}
+@media (max-width:430px){
+  .logo-navbar{
+    width:8%;
+  }
+}
+@media (min-width:431px) and (max-width:550px){
+  .logo-navbar{
+    width:7%;
+  }
+}
+@media (min-width:551px) and (max-width:767px){
+  .logo-navbar{
+    width:5%;
+  }
+}
+@media (max-width: 991px) {
+  .images {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .images {
+    height: 600px;
+    width: 200px;
+  }
+}
+.head-movie {
+  font-family: "Times New Roman", Times, serif;
+}
+@media (max-width: 767px) {
+  .images2 {
+    margin-top: 10px;
+  }
+}
+
+.movie-new {
+  position: relative;
+}
+
+.movie-image {
+  box-shadow: 3px 3px 10px rgb(177, 175, 175);
+  border-radius: 10px;
+}
+
+.movie-image:hover {
+  animation-name: movie-card;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes movie-card {
+  to {
+    transform: skew(30deg);
+    box-shadow: 5px 5px 5px red;
+  }
+}
+.nav-link:hover {
+  border-bottom: 1px solid red;
+}
+
+.movie-rating {
+  /* display:none; */
+  opacity: 0;
+}
+.movie-new:hover .movie-rating {
+  translate: 2s ease;
+  opacity: 1;
+  animation-name: animate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes animate {
+  to {
+    transform: skew(30deg);
+    color: red;
+    transform: translateX(17%);
+  }
+}

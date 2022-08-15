@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieFlix - An online movie review web-application</title>
+    <link rel="stylesheet" href="./resource/style.css" />
+    <!-- favicon link -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- aos installation css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- icon link css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body data-spy="scroll" data-target="#mynavbar">
+    <!-- navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg pb-2 pt-2" style="background-color:black;" id="mynavbar" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="container-fluid">
+        <img src="./images/logo.jpg" class="img-fluid logo-navbar" />
+        <a
+          class="navbar-brand me-2"
+          href="#"
+          style="font-family: 'Times New Roman', Times, serif"
+          ><span style="color: red; margin-left: 10px">MovieFlix</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movie" data-toggle="collapse" data-target=".navbar-collapse.show">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#series" data-toggle="collapse" data-target=".navbar-collapse.show">Series</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search your movie" aria-label="Search"> -->
+            <a href="./login.html" style="text-decoration:none;"><button class="btn btn-outline-light" type="button">Login</button></a>
+            <a href="./register.html" style="text-decoration:none;"><button class="btn btn-outline-light ms-3 me-2" type="button">
+              Register
+            </button></a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!-- Carousel -->
+      <div class="row justify-content-evenly carousel-fade" style="background-color:black;" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="col-md-8">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="true"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./images/Cimage1.jpg"
+                  class="d-block images w-100"
+                  alt="img1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/Cimage2.jpg"
+                  class="d-block images w-100"
+                  alt="img2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/Cimage3.jpg"
+                  class="d-block images w-100"
+                  alt="img3"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/Cimage4.jpg"
+                  class="d-block images w-100"
+                  alt="img3"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/Cimage5.jpg"
+                  class="d-block images w-100"
+                  alt="img3"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- carousel end -->
+      <!-- tv show heading -->
+      <div class="row pb-4" id="movie" style="background-color:black;"></div>
+      <div
+        class="row text-center pt-4 pb-2 justify-content-evenly text-white" style="background-color:black;"
+      >
+        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="2000">
+          <h1 class="head-movie" style="border-bottom: 2px solid red">
+            Top Trending Movies
+          </h1>
+        </div>
+      </div>
+      <!-- tv show end -->
+      <!-- top tv show session  -->
+      <div
+        class="row text-center pt-3 text-white justify-content-evenly" style="background-color:black;"
+      >
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage1.jpg"
+            class="img-fluid movie-image"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:8.2<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage2.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.6<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage3.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:7.5<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage4.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:8.6<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="row text-center pt-3 text-white justify-content-evenly" style="background-color:black;"
+      >
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage5.jpg"
+            class="img-fluid movie-image"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:7.9<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage6.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:6.9<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage7.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.8<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Mimage8.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:7.5<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+      </div>
+      <!-- tv show end -->
+      <!-- Series start -->
+      <div class="row pb-4" id="series" style="background-color:black;"></div>
+      <div
+        class="row text-center pt-4 pb-2 text-white justify-content-evenly" style="background-color:black;"
+      >
+        <div class="col-md-4" data-aos="zoom-in" data-aos-duration="2000">
+          <h1 class="head-movie" style="border-bottom: 2px solid red">
+            Top Trending Series
+          </h1>
+        </div>
+      </div>
+      <!-- tv show end -->
+      <!-- top tv show session  -->
+      <div
+        class="row text-center pt-3 pb-2 text-whites justify-content-evenly" style="background-color:black;"
+      >
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage1.jpg"
+            class="img-fluid movie-image"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:8.9<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage2.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.2<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/simage3.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.7<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage4.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:8.0<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+      </div>
+      <!-- new series section -->
+      <div
+        class="row text-center pt-2 pb-5 text-whites justify-content-evenly" style="background-color:black;"
+      >
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage5.jpg"
+            class="img-fluid movie-image"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.6<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage6.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:7.2<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage7.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:8.7<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+        <div class="col-md-2 movie-new" data-aos="zoom-in" data-aos-duration="2000">
+          <img
+            src="./images/Simage8.jpg"
+            class="img-fluid movie-image images2"
+            style="height: 300px"
+          />
+          <p
+            style="position: absolute; top: 92%; left: 35%; color: white"
+            class="movie-rating"
+          >
+            Rating:9.1<i class="bi bi-hand-thumbs-up"></i>/10
+          </p>
+        </div>
+      </div>
+      <!-- new series end -->
+      <!-- series end -->
+      <!-- footer -->
+      <div
+        class="row justify-content-evenly text-center pt-3 pb-3 text-danger"
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          border-top: 1px solid rgb(85, 82, 82); background-color:black;
+        "
+      >
+        <div class="col-md-10">
+          <h5 >Copyright @Movieflix 2022.All right reserved.</h5>
+          <h5 >Developed by Siddesh Jaiswal</h5>
+          <h5>Contact me on </h5>
+          <h4>
+            <a href="https://www.facebook.com/siddesh.jaiswal.921"><i class="bi bi-facebook pe-2 ps-2" style="color:rgb(49, 117, 196)" ></i></a>
+            <a href="http://instagram.com/siddesh12_?utm_source=qr"><i class="bi bi-instagram pe-2" style="color:rgb(245, 55, 252)"></i></a>
+            <a href="mailto:siddeshjaiswal12@gmail.com"><i class="bi bi-envelope pe-2" style="color:rgb(247, 4, 4)" ></i></i></a>
+            <a href="https://github.com/Siddesh1210"><i class="bi bi-github pe-2" style="color:rgb(250, 250, 253)"></i></a>
+          </h4>
+        </div>
+      </div>
+      <!-- footer-end -->
+
+      <!-- end of container -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script>
+      jQuery(document).ready(function($)
+      {
+        var alterClass=function(){
+          var ww=document.body.clientWidth;
+          if(ww > 991){
+            $('.navbar').addClass('fixed-top');
+          }
+          else if(ww <=991){
+            $('.navbar').removeClass('fixed-top');
+          };
+        };
+        $(window).resize(function(){
+          alterClass();
+        });
+      });
+    </script> -->
+    <script>
+  $(document).ready(function()
+      {
+        if($(window).width()<=991){
+          $(".navbar").removeClass("fixed-top");
+        }
+        else if($(window).width()>991){
+          $(".navbar").addClass("fixed-top");
+        }
+      });
+    </script>
+    <!-- aos installation script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- aos end -->
+
+  </body>
+</html>
